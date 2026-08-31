@@ -17,7 +17,7 @@
 <meta property="og:title" content="Villa Armonía — Hotel & Spa Holístico para Adultos">
 <meta property="og:description" content="Un refugio holístico para adultos en San Juan Cosalá, Jalisco. Alberca climatizada, jacuzzi al aire libre y jardines con bonsáis a orillas del Lago de Chapala.">
 <meta property="og:url" content="https://publifix.github.io/villa-armonia/">
-<meta property="og:image" content="https://publifix.github.io/villa-armonia/assets/img/og-image.png">
+<meta property="og:image" content="https://publifix.github.io/villa-armonia/assets/img/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 
@@ -25,10 +25,9 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Villa Armonía — Hotel & Spa Holístico para Adultos">
 <meta name="twitter:description" content="Un refugio holístico para adultos en San Juan Cosalá, Jalisco, a orillas del Lago de Chapala.">
-<meta name="twitter:image" content="https://publifix.github.io/villa-armonia/assets/img/og-image.png">
+<meta name="twitter:image" content="https://publifix.github.io/villa-armonia/assets/img/og-image.jpg">
 
-<!-- Favicons / manifest -->
-<link rel="icon" href="assets/img/icon-mark.svg" type="image/svg+xml">
+<!-- Favicons / manifest (cropped from the client's real logo) -->
 <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
 <link rel="icon" href="favicon-16.png" sizes="16x16" type="image/png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -43,7 +42,7 @@
 
 <!-- Preload the hero image: it renders with fetchpriority=high below, this
      hint lets the browser start the request even earlier -->
-<link rel="preload" as="image" href="assets/img/hero-pool-mountain.svg">
+<link rel="preload" as="image" href="assets/img/photos/hero-1800.jpg" imagesrcset="assets/img/photos/hero-900.jpg 900w, assets/img/photos/hero-1800.jpg 1800w" imagesizes="100vw">
 
 <script type="application/ld+json">
 {
@@ -51,7 +50,7 @@
   "@type": "Hotel",
   "name": "Villa Armonía Hotel & Spa",
   "description": "Hotel & spa holístico exclusivo para adultos, integrado con la naturaleza en San Juan Cosalá, Jocotepec, Jalisco, a orillas del Lago de Chapala.",
-  "image": "https://publifix.github.io/villa-armonia/assets/img/og-image.png",
+  "image": "https://publifix.github.io/villa-armonia/assets/img/og-image.jpg",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Carretera a Jocotepec 1303, San Juan Cosalá",
@@ -82,8 +81,8 @@
 <header class="site-header" id="site-header">
   <div class="container">
     <a href="#inicio" class="logo-mark" aria-label="Villa Armonía Hotel & Spa — ir al inicio">
-      <!-- Logotipo: lockup tipográfico provisional. // MOCK — sustituir por el logotipo oficial del cliente cuando esté disponible en el repo. Un único componente, sin duplicar por breakpoint. -->
-      <img src="assets/img/logo-lockup.svg" width="200" height="42" alt="Villa Armonía Hotel & Spa">
+      <!-- Logotipo oficial del cliente. Un único componente en todo el DOM, sin duplicar por breakpoint. -->
+      <img src="assets/img/logo.png" width="480" height="460" alt="Villa Armonía Hotel & Spa">
     </a>
 
     <nav class="nav-desktop" aria-label="Navegación principal">
@@ -150,13 +149,17 @@
        ================================================================ -->
   <section class="hero" id="inicio">
     <div class="hero__media">
-      <img
-        src="assets/img/hero-pool-mountain.svg"
-        alt="Alberca climatizada y jacuzzi al aire libre de Villa Armonía con vista a la montaña, al amanecer"
-        width="1920" height="1200"
-        fetchpriority="high"
-        decoding="async">
-      <!-- MOCK — placeholder de fotografía generado in-house (composición vectorial en la paleta de marca). Sustituir por fotografía real del repo/cliente con srcset (avif/webp + fallback jpg) en cuanto esté disponible. -->
+      <picture>
+        <source type="image/webp" srcset="assets/img/photos/hero-900.webp 900w, assets/img/photos/hero-1800.webp 1800w" sizes="100vw">
+        <img
+          src="assets/img/photos/hero-1800.jpg"
+          srcset="assets/img/photos/hero-900.jpg 900w, assets/img/photos/hero-1800.jpg 1800w"
+          sizes="100vw"
+          alt="Alberca al aire libre de Villa Armonía con vista a la montaña y jardín florido"
+          width="1072" height="1123"
+          fetchpriority="high"
+          decoding="async">
+      </picture>
     </div>
     <div class="hero__scrim" aria-hidden="true"></div>
 
@@ -191,8 +194,10 @@
     <div class="container">
       <div class="about-grid">
         <div class="about-media reveal">
-          <img src="assets/img/about-garden-bonsai.svg" alt="Jardín interior de Villa Armonía con bonsáis y vegetación en calma" width="1200" height="1400" loading="lazy" decoding="async">
-          <!-- MOCK — placeholder de fotografía, sustituir por asset real del cliente -->
+          <picture>
+            <source type="image/webp" srcset="assets/img/photos/about-garden-700.webp 700w, assets/img/photos/about-garden-1400.webp 1400w" sizes="(min-width: 1024px) 50vw, 100vw">
+            <img src="assets/img/photos/about-garden-1400.jpg" srcset="assets/img/photos/about-garden-700.jpg 700w, assets/img/photos/about-garden-1400.jpg 1400w" sizes="(min-width: 1024px) 50vw, 100vw" alt="Andador entre los jardines y cabañas de Villa Armonía" width="1400" height="1750" loading="lazy" decoding="async">
+          </picture>
         </div>
         <div class="about-text">
           <div class="section-head reveal">
@@ -216,7 +221,8 @@
   <!-- ================================================================
        HABITACIONES
        ================================================================ -->
-  <!-- VERIFICAR: nombres de habitaciones de investigación pública, confirmar con el cliente antes de publicar como definitivos -->
+  <!-- VERIFICAR: nombres de habitaciones de investigación pública (Fortaleza, Gratitud, Alegría, Amor, Paz, Romance), confirmar con el cliente antes de publicar como definitivos.
+       Nota: una de las fotos reales subidas al repo (originals/527574528_...jpg, usada aquí como room-f/"Romance") muestra una cabaña con un letrero que dice "Libertad" — un nombre que NO está en esta lista. Es señal de que el naming real de habitaciones podría ser distinto; confirmar el listado completo con el cliente antes de publicar. -->
   <section class="section" id="habitaciones">
     <div class="container">
       <div class="section-head center reveal">
@@ -228,7 +234,10 @@
       <div class="grid grid--3 stagger-grid">
         <article class="card stagger-item">
           <div class="room-card__media">
-            <img src="assets/img/room-mountain-view.svg" alt="Habitación Fortaleza con vista a la montaña" width="900" height="1100" loading="lazy" decoding="async">
+            <picture>
+              <source type="image/webp" srcset="assets/img/photos/room-a-600.webp 600w, assets/img/photos/room-a-1100.webp 1100w" sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw">
+              <img src="assets/img/photos/room-a-1100.jpg" srcset="assets/img/photos/room-a-600.jpg 600w, assets/img/photos/room-a-1100.jpg 1100w" sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw" alt="Habitación con techo de palma y ropa de cama en tonos neutros" width="720" height="960" loading="lazy" decoding="async">
+            </picture>
           </div>
           <div class="room-card__body">
             <h3>Fortaleza</h3>
@@ -237,7 +246,10 @@
         </article>
         <article class="card stagger-item">
           <div class="room-card__media">
-            <img src="assets/img/room-thermal-view.svg" alt="Habitación Gratitud con acentos en tono azul termal" width="900" height="1100" loading="lazy" decoding="async">
+            <picture>
+              <source type="image/webp" srcset="assets/img/photos/room-b-600.webp 600w, assets/img/photos/room-b-1100.webp 1100w" sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw">
+              <img src="assets/img/photos/room-b-1100.jpg" srcset="assets/img/photos/room-b-600.jpg 600w, assets/img/photos/room-b-1100.jpg 1100w" sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw" alt="Habitación con pared de madera tallada y ropa de cama blanca" width="540" height="960" loading="lazy" decoding="async">
+            </picture>
           </div>
           <div class="room-card__body">
             <h3>Gratitud</h3>
@@ -246,7 +258,10 @@
         </article>
         <article class="card stagger-item">
           <div class="room-card__media">
-            <img src="assets/img/room-garden-view.svg" alt="Habitación Alegría con vista al jardín" width="900" height="1100" loading="lazy" decoding="async">
+            <picture>
+              <source type="image/webp" srcset="assets/img/photos/room-c-600.webp 600w, assets/img/photos/room-c-1100.webp 1100w" sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw">
+              <img src="assets/img/photos/room-c-1100.jpg" srcset="assets/img/photos/room-c-600.jpg 600w, assets/img/photos/room-c-1100.jpg 1100w" sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw" alt="Cabaña tipo A-frame de Villa Armonía entre los jardines" width="1100" height="1467" loading="lazy" decoding="async">
+            </picture>
           </div>
           <div class="room-card__body">
             <h3>Alegría</h3>
@@ -255,7 +270,10 @@
         </article>
         <article class="card stagger-item">
           <div class="room-card__media">
-            <img src="assets/img/room-mountain-view.svg" alt="Habitación Amor con vista a la montaña" width="900" height="1100" loading="lazy" decoding="async">
+            <picture>
+              <source type="image/webp" srcset="assets/img/photos/room-d-600.webp 600w, assets/img/photos/room-d-1100.webp 1100w" sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw">
+              <img src="assets/img/photos/room-d-1100.jpg" srcset="assets/img/photos/room-d-600.jpg 600w, assets/img/photos/room-d-1100.jpg 1100w" sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw" alt="Cabaña con escultura de corazón en el jardín, ambiente romántico" width="1100" height="1467" loading="lazy" decoding="async">
+            </picture>
           </div>
           <div class="room-card__body">
             <h3>Amor</h3>
@@ -264,7 +282,10 @@
         </article>
         <article class="card stagger-item">
           <div class="room-card__media">
-            <img src="assets/img/room-thermal-view.svg" alt="Habitación Paz con acentos en tono azul termal" width="900" height="1100" loading="lazy" decoding="async">
+            <picture>
+              <source type="image/webp" srcset="assets/img/photos/room-e-600.webp 600w, assets/img/photos/room-e-1100.webp 1100w" sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw">
+              <img src="assets/img/photos/room-e-1100.jpg" srcset="assets/img/photos/room-e-600.jpg 600w, assets/img/photos/room-e-1100.jpg 1100w" sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw" alt="Habitación con baúl decorativo y cama en tonos cálidos" width="1100" height="825" loading="lazy" decoding="async">
+            </picture>
           </div>
           <div class="room-card__body">
             <h3>Paz</h3>
@@ -273,7 +294,10 @@
         </article>
         <article class="card stagger-item">
           <div class="room-card__media">
-            <img src="assets/img/room-garden-view.svg" alt="Habitación Romance con vista al jardín" width="900" height="1100" loading="lazy" decoding="async">
+            <picture>
+              <source type="image/webp" srcset="assets/img/photos/room-f-600.webp 600w, assets/img/photos/room-f-1100.webp 1100w" sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw">
+              <img src="assets/img/photos/room-f-1100.jpg" srcset="assets/img/photos/room-f-600.jpg 600w, assets/img/photos/room-f-1100.jpg 1100w" sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw" alt="Cabaña de Villa Armonía con terraza de madera al atardecer" width="1100" height="1467" loading="lazy" decoding="async">
+            </picture>
           </div>
           <div class="room-card__body">
             <h3>Romance</h3>
@@ -302,8 +326,10 @@
        ================================================================ -->
   <section class="spa-pin" id="spa">
     <div class="spa-pin__media">
-      <img src="assets/img/spa-water-calm.svg" alt="Superficie de agua en calma del jacuzzi de Villa Armonía" width="1600" height="1800" loading="lazy" decoding="async">
-      <!-- MOCK — placeholder de fotografía, sustituir por asset real del cliente -->
+      <picture>
+        <source type="image/webp" srcset="assets/img/photos/spa-water-900.webp 900w, assets/img/photos/spa-water-1800.webp 1800w" sizes="100vw">
+        <img src="assets/img/photos/spa-water-1800.jpg" srcset="assets/img/photos/spa-water-900.jpg 900w, assets/img/photos/spa-water-1800.jpg 1800w" sizes="100vw" alt="Jacuzzi al aire libre de Villa Armonía iluminado por la noche" width="1536" height="2048" loading="lazy" decoding="async">
+      </picture>
       <div class="spa-pin__scrim" aria-hidden="true"></div>
     </div>
     <div class="container spa-pin__inner">
@@ -327,8 +353,10 @@
     <div class="container">
       <div class="restaurant-grid">
         <div class="restaurant-media reveal">
-          <img src="assets/img/restaurant-table.svg" alt="Mesa dispuesta en el restaurante de Villa Armonía" width="1200" height="900" loading="lazy" decoding="async">
-          <!-- MOCK — placeholder de fotografía, sustituir por asset real del cliente -->
+          <picture>
+            <source type="image/webp" srcset="assets/img/photos/restaurant-700.webp 700w, assets/img/photos/restaurant-1400.webp 1400w" sizes="(min-width: 1024px) 45vw, 100vw">
+            <img src="assets/img/photos/restaurant-1400.jpg" srcset="assets/img/photos/restaurant-700.jpg 700w, assets/img/photos/restaurant-1400.jpg 1400w" sizes="(min-width: 1024px) 45vw, 100vw" alt="Mesa servida en el restaurante de Villa Armonía" width="1400" height="1867" loading="lazy" decoding="async">
+          </picture>
         </div>
         <div>
           <div class="section-head reveal">
@@ -351,11 +379,17 @@
         <h2>Naturaleza en cada rincón</h2>
       </div>
       <div class="grid grid--2 stagger-grid" style="margin-bottom:var(--space-6);">
-        <div class="about-media" style="aspect-ratio:16/10;">
-          <img src="assets/img/gardens-elements.svg" alt="Jardines de Villa Armonía con atrapasueños y bicicletas" width="1200" height="900" loading="lazy" decoding="async" class="stagger-item">
+        <div class="about-media stagger-item" style="aspect-ratio:16/10;">
+          <picture>
+            <source type="image/webp" srcset="assets/img/photos/gardens-b-700.webp 700w, assets/img/photos/gardens-b-1400.webp 1400w" sizes="(min-width: 768px) 50vw, 100vw">
+            <img src="assets/img/photos/gardens-b-1400.jpg" srcset="assets/img/photos/gardens-b-700.jpg 700w, assets/img/photos/gardens-b-1400.jpg 1400w" sizes="(min-width: 768px) 50vw, 100vw" alt="Puente colgante de madera entre los jardines de Villa Armonía" width="1400" height="1400" loading="lazy" decoding="async">
+          </picture>
         </div>
-        <div class="about-media" style="aspect-ratio:16/10;">
-          <img src="assets/img/about-garden-bonsai.svg" alt="Bonsáis cuidados a mano en los jardines de Villa Armonía" width="1200" height="1400" loading="lazy" decoding="async" class="stagger-item">
+        <div class="about-media stagger-item" style="aspect-ratio:16/10;">
+          <picture>
+            <source type="image/webp" srcset="assets/img/photos/gardens-a-700.webp 700w, assets/img/photos/gardens-a-1400.webp 1400w" sizes="(min-width: 768px) 50vw, 100vw">
+            <img src="assets/img/photos/gardens-a-1400.jpg" srcset="assets/img/photos/gardens-a-700.jpg 700w, assets/img/photos/gardens-a-1400.jpg 1400w" sizes="(min-width: 768px) 50vw, 100vw" alt="Zona de descanso en los jardines de Villa Armonía" width="1200" height="1600" loading="lazy" decoding="async">
+          </picture>
         </div>
       </div>
       <div class="grid grid--3 stagger-grid">
@@ -385,14 +419,43 @@
         <h2>Un vistazo a Villa Armonía</h2>
       </div>
       <ul class="mosaic stagger-grid">
-        <li class="stagger-item"><img src="assets/img/hero-pool-mountain.svg" alt="Alberca y jacuzzi al aire libre con vista a la montaña" width="1920" height="1200" loading="lazy" decoding="async"></li>
-        <li class="stagger-item"><img src="assets/img/about-garden-bonsai.svg" alt="Jardines con bonsáis de Villa Armonía" width="1200" height="1400" loading="lazy" decoding="async"></li>
-        <li class="stagger-item"><img src="assets/img/room-thermal-view.svg" alt="Habitación con acentos en tono azul termal" width="900" height="1100" loading="lazy" decoding="async"></li>
-        <li class="stagger-item"><img src="assets/img/restaurant-table.svg" alt="Mesa del restaurante de Villa Armonía" width="1200" height="900" loading="lazy" decoding="async"></li>
-        <li class="stagger-item"><img src="assets/img/spa-water-calm.svg" alt="Agua en calma del área de spa" width="1600" height="1800" loading="lazy" decoding="async"></li>
-        <li class="stagger-item"><img src="assets/img/gardens-elements.svg" alt="Elementos naturales de los jardines: atrapasueños y bicicletas" width="1200" height="900" loading="lazy" decoding="async"></li>
+        <li class="stagger-item">
+          <picture>
+            <source type="image/webp" srcset="assets/img/photos/gallery-1-500.webp 500w, assets/img/photos/gallery-1-1000.webp 1000w" sizes="(min-width: 768px) 50vw, 100vw">
+            <img src="assets/img/photos/gallery-1-1000.jpg" srcset="assets/img/photos/gallery-1-500.jpg 500w, assets/img/photos/gallery-1-1000.jpg 1000w" sizes="(min-width: 768px) 50vw, 100vw" alt="Camastros junto a la alberca de Villa Armonía" width="1000" height="750" loading="lazy" decoding="async">
+          </picture>
+        </li>
+        <li class="stagger-item">
+          <picture>
+            <source type="image/webp" srcset="assets/img/photos/gallery-2-500.webp 500w, assets/img/photos/gallery-2-1000.webp 1000w" sizes="25vw">
+            <img src="assets/img/photos/gallery-2-1000.jpg" srcset="assets/img/photos/gallery-2-500.jpg 500w, assets/img/photos/gallery-2-1000.jpg 1000w" sizes="25vw" alt="Cabañas de Villa Armonía al atardecer" width="1000" height="1250" loading="lazy" decoding="async">
+          </picture>
+        </li>
+        <li class="stagger-item">
+          <picture>
+            <source type="image/webp" srcset="assets/img/photos/gallery-3-500.webp 500w, assets/img/photos/gallery-3-1000.webp 1000w" sizes="25vw">
+            <img src="assets/img/photos/gallery-3-1000.jpg" srcset="assets/img/photos/gallery-3-500.jpg 500w, assets/img/photos/gallery-3-1000.jpg 1000w" sizes="25vw" alt="Fogata con copas de vino en los jardines" width="853" height="1280" loading="lazy" decoding="async">
+          </picture>
+        </li>
+        <li class="stagger-item">
+          <picture>
+            <source type="image/webp" srcset="assets/img/photos/gallery-4-500.webp 500w, assets/img/photos/gallery-4-1000.webp 1000w" sizes="(min-width: 768px) 50vw, 100vw">
+            <img src="assets/img/photos/gallery-4-1000.jpg" srcset="assets/img/photos/gallery-4-500.jpg 500w, assets/img/photos/gallery-4-1000.jpg 1000w" sizes="(min-width: 768px) 50vw, 100vw" alt="Terraza con buganvilias en flor" width="1000" height="1112" loading="lazy" decoding="async">
+          </picture>
+        </li>
+        <li class="stagger-item">
+          <picture>
+            <source type="image/webp" srcset="assets/img/photos/gallery-5-500.webp 500w, assets/img/photos/gallery-5-1000.webp 1000w" sizes="25vw">
+            <img src="assets/img/photos/gallery-5-1000.jpg" srcset="assets/img/photos/gallery-5-500.jpg 500w, assets/img/photos/gallery-5-1000.jpg 1000w" sizes="25vw" alt="Vista al Lago de Chapala desde Villa Armonía" width="622" height="622" loading="lazy" decoding="async">
+          </picture>
+        </li>
+        <li class="stagger-item">
+          <picture>
+            <source type="image/webp" srcset="assets/img/photos/gallery-6-500.webp 500w, assets/img/photos/gallery-6-1000.webp 1000w" sizes="25vw">
+            <img src="assets/img/photos/gallery-6-1000.jpg" srcset="assets/img/photos/gallery-6-500.jpg 500w, assets/img/photos/gallery-6-1000.jpg 1000w" sizes="25vw" alt="Alberca de Villa Armonía en un día soleado" width="1000" height="1333" loading="lazy" decoding="async">
+          </picture>
+        </li>
       </ul>
-      <!-- MOCK — placeholders de fotografía, sustituir por assets reales del cliente con srcset/webp -->
     </div>
   </section>
 
