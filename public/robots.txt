@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://publifix.github.io/villa-armonia/sitemap.xml

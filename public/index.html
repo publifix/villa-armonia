@@ -3,47 +3,552 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Villa Armonia Hotel &amp; Spa</title>
-<style>
-  :root { color-scheme: light dark; }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-family: Georgia, 'Times New Roman', serif;
-    background: #f6f3ee;
-    color: #2b2620;
-    padding: 2rem;
-  }
-  main { max-width: 40rem; }
-  h1 {
-    font-size: clamp(2rem, 5vw, 3rem);
-    letter-spacing: 0.04em;
-    margin: 0 0 0.5rem;
-  }
-  p {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    font-size: 1.1rem;
-    color: #6b6255;
-    margin: 0;
-  }
-  .divider {
-    width: 3rem;
-    height: 2px;
-    background: #b89b6a;
-    margin: 1.25rem auto;
-  }
-</style>
+<title>Villa Armonía — Hotel & Spa Holístico para Adultos en San Juan Cosalá, Jalisco</title>
+<meta name="description" content="Hotel & spa holístico exclusivo para adultos en San Juan Cosalá, Jalisco, a orillas del Lago de Chapala. Alberca climatizada, jacuzzi y jardines con bonsáis.">
+<meta name="keywords" content="hotel spa adultos, hotel holístico Jalisco, San Juan Cosalá, Lago de Chapala, spa Jocotepec, hotel para adultos, retiro de bienestar México">
+<link rel="canonical" href="https://publifix.github.io/villa-armonia/">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#4A5D45">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_MX">
+<meta property="og:site_name" content="Villa Armonía Hotel & Spa">
+<meta property="og:title" content="Villa Armonía — Hotel & Spa Holístico para Adultos">
+<meta property="og:description" content="Un refugio holístico para adultos en San Juan Cosalá, Jalisco. Alberca climatizada, jacuzzi al aire libre y jardines con bonsáis a orillas del Lago de Chapala.">
+<meta property="og:url" content="https://publifix.github.io/villa-armonia/">
+<meta property="og:image" content="https://publifix.github.io/villa-armonia/assets/img/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Villa Armonía — Hotel & Spa Holístico para Adultos">
+<meta name="twitter:description" content="Un refugio holístico para adultos en San Juan Cosalá, Jalisco, a orillas del Lago de Chapala.">
+<meta name="twitter:image" content="https://publifix.github.io/villa-armonia/assets/img/og-image.png">
+
+<!-- Favicons / manifest -->
+<link rel="icon" href="assets/img/icon-mark.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="favicon-16.png" sizes="16x16" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;1,400;1,500&family=Karla:wght@400;500;600;700&display=swap">
+
+<link rel="stylesheet" href="assets/css/styles.css">
+
+<!-- Preload the hero image: it renders with fetchpriority=high below, this
+     hint lets the browser start the request even earlier -->
+<link rel="preload" as="image" href="assets/img/hero-pool-mountain.svg">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Hotel",
+  "name": "Villa Armonía Hotel & Spa",
+  "description": "Hotel & spa holístico exclusivo para adultos, integrado con la naturaleza en San Juan Cosalá, Jocotepec, Jalisco, a orillas del Lago de Chapala.",
+  "image": "https://publifix.github.io/villa-armonia/assets/img/og-image.png",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Carretera a Jocotepec 1303, San Juan Cosalá",
+    "addressLocality": "Jocotepec",
+    "addressRegion": "Jalisco",
+    "postalCode": "45820",
+    "addressCountry": "MX"
+  },
+  "telephone": "+523324948085",
+  "email": "hotelgrupoarmonia@hotmail.com",
+  "checkinTime": "14:00",
+  "checkoutTime": "11:00",
+  "url": "https://publifix.github.io/villa-armonia/",
+  "sameAs": [
+    "https://www.instagram.com/hotelvillaarmonia",
+    "https://www.facebook.com/share/17amNqAKjT/"
+  ]
+}
+</script>
+<!-- VERIFICAR: agregar "geo": {"@type":"GeoCoordinates","latitude":...,"longitude":...} al JSON-LD de arriba en cuanto el cliente confirme coordenadas reales. No se inventan valores de geolocalización. -->
 </head>
 <body>
-  <main>
-    <h1>Villa Armonia</h1>
-    <div class="divider"></div>
-    <p>Hotel &amp; Spa — sitio en construcción.</p>
-  </main>
+<a class="skip-link" href="#main">Saltar al contenido principal</a>
+
+<!-- ==================================================================
+     HEADER / NAV — logo único, sticky, transparente→sólido, hide-on-scroll
+     ================================================================== -->
+<header class="site-header" id="site-header">
+  <div class="container">
+    <a href="#inicio" class="logo-mark" aria-label="Villa Armonía Hotel & Spa — ir al inicio">
+      <!-- Logotipo: lockup tipográfico provisional. // MOCK — sustituir por el logotipo oficial del cliente cuando esté disponible en el repo. Un único componente, sin duplicar por breakpoint. -->
+      <img src="assets/img/logo-lockup.svg" width="200" height="42" alt="Villa Armonía Hotel & Spa">
+    </a>
+
+    <nav class="nav-desktop" aria-label="Navegación principal">
+      <a href="#inicio">Inicio</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#habitaciones">Habitaciones</a>
+      <a href="#spa">Spa &amp; Bienestar</a>
+      <a href="#restaurante">Restaurante</a>
+      <a href="#jardines">Jardines</a>
+      <a href="#galeria">Galería</a>
+      <a href="#ubicacion">Ubicación</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+
+    <div style="display:flex;align-items:center;gap:1rem;">
+      <a class="btn btn--primary nav-desktop-cta" href="https://www.booking.com/Share-UYHjy5x" target="_blank" rel="noopener noreferrer">
+        Reservar
+      </a>
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-drawer" aria-label="Abrir menú de navegación">
+        <svg class="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/>
+        </svg>
+      </button>
+    </div>
+
+    <span class="scroll-progress" aria-hidden="true"></span>
+  </div>
+</header>
+
+<!-- Mobile / tablet full-screen drawer — overlay is ALWAYS solid Verde Salvia -->
+<div class="nav-drawer" id="nav-drawer">
+  <div class="nav-drawer__top container">
+    <button class="nav-drawer__close" id="nav-close" aria-label="Cerrar menú de navegación">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+        <line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/>
+      </svg>
+    </button>
+  </div>
+  <div class="nav-drawer__body container">
+    <nav aria-label="Navegación móvil">
+      <ul class="nav-drawer__links">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#habitaciones">Habitaciones</a></li>
+        <li><a href="#spa">Spa &amp; Bienestar</a></li>
+        <li><a href="#restaurante">Restaurante</a></li>
+        <li><a href="#jardines">Jardines</a></li>
+        <li><a href="#galeria">Galería</a></li>
+        <li><a href="#ubicacion">Ubicación</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+    <div class="nav-drawer__cta">
+      <a class="btn btn--primary" href="https://www.booking.com/Share-UYHjy5x" target="_blank" rel="noopener noreferrer">Reservar ahora</a>
+      <a class="btn btn--secondary" href="https://wa.me/523324948085" target="_blank" rel="noopener noreferrer">Consultar por WhatsApp</a>
+    </div>
+  </div>
+</div>
+
+<main id="main">
+
+  <!-- ================================================================
+       HERO — sin logotipo superpuesto; foto + tipografía + CTAs
+       ================================================================ -->
+  <section class="hero" id="inicio">
+    <div class="hero__media">
+      <img
+        src="assets/img/hero-pool-mountain.svg"
+        alt="Alberca climatizada y jacuzzi al aire libre de Villa Armonía con vista a la montaña, al amanecer"
+        width="1920" height="1200"
+        fetchpriority="high"
+        decoding="async">
+      <!-- MOCK — placeholder de fotografía generado in-house (composición vectorial en la paleta de marca). Sustituir por fotografía real del repo/cliente con srcset (avif/webp + fallback jpg) en cuanto esté disponible. -->
+    </div>
+    <div class="hero__scrim" aria-hidden="true"></div>
+
+    <div class="hero__content">
+      <p class="kicker reveal">Hotel &amp; Spa Holístico · San Juan Cosalá, Jalisco</p>
+      <h1 class="reveal">Villa Armonía es tu lugar de paz</h1>
+      <p class="lead reveal">Vive una experiencia única de hospedaje en un hotel holístico para adultos, integrado con la naturaleza, a orillas del Lago de Chapala.</p>
+      <div class="cta-group reveal">
+        <a class="btn btn--primary" href="https://www.booking.com/Share-UYHjy5x" target="_blank" rel="noopener noreferrer">
+          Reservar ahora
+        </a>
+        <a class="btn btn--secondary" href="https://wa.me/523324948085" target="_blank" rel="noopener noreferrer">
+          Consultar por WhatsApp
+        </a>
+      </div>
+      <p class="adults-badge reveal">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="8" r="3"/><path d="M5 20c0-4 3-6 7-6s7 2 7 6"/></svg>
+        Hotel exclusivo para adultos (18+)
+      </p>
+    </div>
+
+    <div class="scroll-cue" aria-hidden="true">
+      <span>Descubre</span>
+      <span class="scroll-cue__line"></span>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       SOBRE VILLA ARMONÍA
+       ================================================================ -->
+  <section class="section section--surface" id="nosotros">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-media reveal">
+          <img src="assets/img/about-garden-bonsai.svg" alt="Jardín interior de Villa Armonía con bonsáis y vegetación en calma" width="1200" height="1400" loading="lazy" decoding="async">
+          <!-- MOCK — placeholder de fotografía, sustituir por asset real del cliente -->
+        </div>
+        <div class="about-text">
+          <div class="section-head reveal">
+            <p class="kicker">Sobre Nosotros</p>
+            <h2>Un refugio holístico para adultos</h2>
+          </div>
+          <p class="lead reveal">Villa Armonía es un hotel &amp; spa holístico pensado exclusivamente para adultos, integrado con la naturaleza en San Juan Cosalá, Jalisco. Aquí, cada rincón —desde los jardines con bonsáis hasta el jacuzzi al aire libre— está diseñado para que desconectes por completo y recuperes tu equilibrio.</p>
+          <div class="about-badge-row reveal">
+            <div class="rating-badge">
+              <span class="rating-badge__score">9.0</span>
+              <span class="rating-badge__text"><strong>Calificación "Fantástica"</strong>en Booking.com</span>
+            </div>
+            <!-- VERIFICAR — dato de investigación pública, confirmar vigencia de la calificación antes de publicar -->
+            <span class="adults-badge">Solo para mayores de 18 años</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       HABITACIONES
+       ================================================================ -->
+  <!-- VERIFICAR: nombres de habitaciones de investigación pública, confirmar con el cliente antes de publicar como definitivos -->
+  <section class="section" id="habitaciones">
+    <div class="container">
+      <div class="section-head center reveal">
+        <p class="kicker">Habitaciones</p>
+        <h2>Cada habitación, un estado de ánimo</h2>
+        <p class="lead" style="margin-top:1rem;">Nuestras habitaciones llevan nombres que invitan a sentir: Fortaleza, Gratitud, Alegría, Amor, Paz y Romance. Cada una con vista a la montaña y el mismo cuidado en cada detalle.</p>
+      </div>
+
+      <div class="grid grid--3 stagger-grid">
+        <article class="card stagger-item">
+          <div class="room-card__media">
+            <img src="assets/img/room-mountain-view.svg" alt="Habitación Fortaleza con vista a la montaña" width="900" height="1100" loading="lazy" decoding="async">
+          </div>
+          <div class="room-card__body">
+            <h3>Fortaleza</h3>
+            <p>Para quienes llegan a reconectar con su propia fuerza interior.</p>
+          </div>
+        </article>
+        <article class="card stagger-item">
+          <div class="room-card__media">
+            <img src="assets/img/room-thermal-view.svg" alt="Habitación Gratitud con acentos en tono azul termal" width="900" height="1100" loading="lazy" decoding="async">
+          </div>
+          <div class="room-card__body">
+            <h3>Gratitud</h3>
+            <p>Un espacio sereno para hacer una pausa y agradecer el presente.</p>
+          </div>
+        </article>
+        <article class="card stagger-item">
+          <div class="room-card__media">
+            <img src="assets/img/room-garden-view.svg" alt="Habitación Alegría con vista al jardín" width="900" height="1100" loading="lazy" decoding="async">
+          </div>
+          <div class="room-card__body">
+            <h3>Alegría</h3>
+            <p>Luz cálida y vistas abiertas que invitan a sonreír sin razón.</p>
+          </div>
+        </article>
+        <article class="card stagger-item">
+          <div class="room-card__media">
+            <img src="assets/img/room-mountain-view.svg" alt="Habitación Amor con vista a la montaña" width="900" height="1100" loading="lazy" decoding="async">
+          </div>
+          <div class="room-card__body">
+            <h3>Amor</h3>
+            <p>Pensada para compartir en calma, a dos, sin distracciones.</p>
+          </div>
+        </article>
+        <article class="card stagger-item">
+          <div class="room-card__media">
+            <img src="assets/img/room-thermal-view.svg" alt="Habitación Paz con acentos en tono azul termal" width="900" height="1100" loading="lazy" decoding="async">
+          </div>
+          <div class="room-card__body">
+            <h3>Paz</h3>
+            <p>El silencio de la montaña como único sonido de fondo.</p>
+          </div>
+        </article>
+        <article class="card stagger-item">
+          <div class="room-card__media">
+            <img src="assets/img/room-garden-view.svg" alt="Habitación Romance con vista al jardín" width="900" height="1100" loading="lazy" decoding="async">
+          </div>
+          <div class="room-card__body">
+            <h3>Romance</h3>
+            <p>Atardeceres largos y una quietud hecha para dos.</p>
+          </div>
+        </article>
+      </div>
+
+      <ul class="feature-list reveal">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 18l6-9 4 5 3-4 5 8z"/></svg>Vista a la montaña</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>Aire acondicionado</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="5" width="18" height="12" rx="1.5"/><path d="M9 21h6"/></svg>TV de pantalla plana</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 3c3 3.5 5 6.2 5 9a5 5 0 0 1-10 0c0-2.8 2-5.5 5-9z"/></svg>Baño privado</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 9h12l-1 10H7z"/><path d="M9 9V6a3 3 0 0 1 6 0v3"/></svg>Algunas con cocineta</li>
+      </ul>
+
+      <!-- MOCK — no se incluyen cifras de tarifas ni disponibilidad; el CTA siempre dirige a Booking.com o WhatsApp -->
+      <div class="section-cta reveal">
+        <a class="btn btn--primary" href="https://www.booking.com/Share-UYHjy5x" target="_blank" rel="noopener noreferrer">Reservar ahora</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       SPA & BIENESTAR — scroll-pinned water backdrop
+       ================================================================ -->
+  <section class="spa-pin" id="spa">
+    <div class="spa-pin__media">
+      <img src="assets/img/spa-water-calm.svg" alt="Superficie de agua en calma del jacuzzi de Villa Armonía" width="1600" height="1800" loading="lazy" decoding="async">
+      <!-- MOCK — placeholder de fotografía, sustituir por asset real del cliente -->
+      <div class="spa-pin__scrim" aria-hidden="true"></div>
+    </div>
+    <div class="container spa-pin__inner">
+      <div class="spa-pin__panel">
+        <p class="kicker reveal">Spa &amp; Bienestar</p>
+        <h2 class="reveal">Agua, calma y naturaleza</h2>
+        <p class="reveal">Alberca climatizada y jacuzzi al aire libre, en una región reconocida por sus manantiales de aguas termales. Nuestra área de spa está pensada para que el descanso sea parte central de tu estancia.</p>
+        <div class="spa-pin__facts reveal">
+          <div class="spa-fact"><strong>Alberca</strong><span>Climatizada todo el año</span></div>
+          <div class="spa-fact"><strong>Jacuzzi</strong><span>Al aire libre</span></div>
+          <div class="spa-fact"><strong>Región</strong><span>Manantiales termales de San Juan Cosalá</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       RESTAURANTE & BAR
+       ================================================================ -->
+  <section class="section section--surface" id="restaurante">
+    <div class="container">
+      <div class="restaurant-grid">
+        <div class="restaurant-media reveal">
+          <img src="assets/img/restaurant-table.svg" alt="Mesa dispuesta en el restaurante de Villa Armonía" width="1200" height="900" loading="lazy" decoding="async">
+          <!-- MOCK — placeholder de fotografía, sustituir por asset real del cliente -->
+        </div>
+        <div>
+          <div class="section-head reveal">
+            <p class="kicker">Restaurante &amp; Bar</p>
+            <h2>Buena mesa, sin salir del refugio</h2>
+          </div>
+          <p class="lead reveal">Disfruta de desayuno incluido y de nuestro restaurante y bar, pensados para acompañar cada momento del día sin que tengas que salir de Villa Armonía.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       JARDINES & NATURALEZA
+       ================================================================ -->
+  <section class="section" id="jardines">
+    <div class="container">
+      <div class="section-head center reveal">
+        <p class="kicker">Jardines</p>
+        <h2>Naturaleza en cada rincón</h2>
+      </div>
+      <div class="grid grid--2 stagger-grid" style="margin-bottom:var(--space-6);">
+        <div class="about-media" style="aspect-ratio:16/10;">
+          <img src="assets/img/gardens-elements.svg" alt="Jardines de Villa Armonía con atrapasueños y bicicletas" width="1200" height="900" loading="lazy" decoding="async" class="stagger-item">
+        </div>
+        <div class="about-media" style="aspect-ratio:16/10;">
+          <img src="assets/img/about-garden-bonsai.svg" alt="Bonsáis cuidados a mano en los jardines de Villa Armonía" width="1200" height="1400" loading="lazy" decoding="async" class="stagger-item">
+        </div>
+      </div>
+      <div class="grid grid--3 stagger-grid">
+        <div class="card garden-card stagger-item">
+          <svg class="garden-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 3c-3 3-5 5.5-5 9a5 5 0 0 0 10 0c0-3.5-2-6-5-9z"/><path d="M12 21v-6"/></svg>
+          <h3>Jardines con bonsáis</h3>
+        </div>
+        <div class="card garden-card stagger-item">
+          <svg class="garden-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="7"/><path d="M12 5v2M12 17v2M5 12h2M17 12h2M7.5 7.5l1.5 1.5M15 15l1.5 1.5M16.5 7.5L15 9M9 15l-1.5 1.5"/></svg>
+          <h3>Atrapasueños</h3>
+        </div>
+        <div class="card garden-card stagger-item">
+          <svg class="garden-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="6" cy="17" r="3"/><circle cx="18" cy="17" r="3"/><path d="M6 17l4-9h4l4 9M10 8h4"/></svg>
+          <h3>Bicicletas gratuitas</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       GALERÍA
+       ================================================================ -->
+  <section class="section section--surface" id="galeria">
+    <div class="container">
+      <div class="section-head center reveal">
+        <p class="kicker">Galería</p>
+        <h2>Un vistazo a Villa Armonía</h2>
+      </div>
+      <ul class="mosaic stagger-grid">
+        <li class="stagger-item"><img src="assets/img/hero-pool-mountain.svg" alt="Alberca y jacuzzi al aire libre con vista a la montaña" width="1920" height="1200" loading="lazy" decoding="async"></li>
+        <li class="stagger-item"><img src="assets/img/about-garden-bonsai.svg" alt="Jardines con bonsáis de Villa Armonía" width="1200" height="1400" loading="lazy" decoding="async"></li>
+        <li class="stagger-item"><img src="assets/img/room-thermal-view.svg" alt="Habitación con acentos en tono azul termal" width="900" height="1100" loading="lazy" decoding="async"></li>
+        <li class="stagger-item"><img src="assets/img/restaurant-table.svg" alt="Mesa del restaurante de Villa Armonía" width="1200" height="900" loading="lazy" decoding="async"></li>
+        <li class="stagger-item"><img src="assets/img/spa-water-calm.svg" alt="Agua en calma del área de spa" width="1600" height="1800" loading="lazy" decoding="async"></li>
+        <li class="stagger-item"><img src="assets/img/gardens-elements.svg" alt="Elementos naturales de los jardines: atrapasueños y bicicletas" width="1200" height="900" loading="lazy" decoding="async"></li>
+      </ul>
+      <!-- MOCK — placeholders de fotografía, sustituir por assets reales del cliente con srcset/webp -->
+    </div>
+  </section>
+
+  <!-- ================================================================
+       TESTIMONIOS
+       ================================================================ -->
+  <!-- MOCK — testimonios de ejemplo; sustituir por reseñas reales del cliente. No se reproducen reseñas reales de Booking.com por derechos de autor. -->
+  <section class="section" id="testimonios">
+    <div class="container">
+      <div class="section-head center reveal">
+        <p class="kicker">Huéspedes</p>
+        <h2>Lo que se vive en Villa Armonía</h2>
+      </div>
+      <div class="grid grid--3 stagger-grid">
+        <blockquote class="testimonial-card stagger-item">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 7h5v5c0 3-2 5-5 5v-2c1.5 0 3-1 3-3H7V7zm9 0h5v5c0 3-2 5-5 5v-2c1.5 0 3-1 3-3h-3V7z"/></svg>
+          <p>“Llegamos buscando desconectar y el lugar superó lo que esperábamos. Todo pensado para el descanso.”</p>
+          <footer>— Huésped</footer>
+        </blockquote>
+        <blockquote class="testimonial-card stagger-item">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 7h5v5c0 3-2 5-5 5v-2c1.5 0 3-1 3-3H7V7zm9 0h5v5c0 3-2 5-5 5v-2c1.5 0 3-1 3-3h-3V7z"/></svg>
+          <p>“El jacuzzi al aire libre con vista a la montaña fue nuestro momento favorito del viaje.”</p>
+          <footer>— Huésped</footer>
+        </blockquote>
+        <blockquote class="testimonial-card stagger-item">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 7h5v5c0 3-2 5-5 5v-2c1.5 0 3-1 3-3H7V7zm9 0h5v5c0 3-2 5-5 5v-2c1.5 0 3-1 3-3h-3V7z"/></svg>
+          <p>“Un hotel pensado para adultos en todo el sentido de la palabra: tranquilo, cuidado, sereno.”</p>
+          <footer>— Huésped</footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       CTA INTERMEDIO
+       ================================================================ -->
+  <section class="section section--sage cta-banner" style="padding-block:var(--space-6);">
+    <div class="container reveal">
+      <h2>Tu paz te está esperando.</h2>
+      <div class="cta-group">
+        <a class="btn btn--primary" href="https://www.booking.com/Share-UYHjy5x" target="_blank" rel="noopener noreferrer">Reservar ahora</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       UBICACIÓN Y HORARIO
+       ================================================================ -->
+  <section class="section" id="ubicacion">
+    <div class="container">
+      <div class="location-grid">
+        <div class="location-details reveal">
+          <p class="kicker">Ubicación</p>
+          <h2>Cómo llegar</h2>
+          <p class="lead" style="margin-top:1rem;">A orillas del Lago de Chapala, cerca del Malecón de Ajijic — un refugio de paz a poca distancia de todo.</p>
+          <dl>
+            <dt>Dirección</dt>
+            <dd>Carretera a Jocotepec 1303, San Juan Cosalá, 45820 Jocotepec, Jal.</dd>
+            <dt>Check-in</dt>
+            <dd>2:00 pm</dd>
+            <dt>Check-out</dt>
+            <dd>11:00 am</dd>
+          </dl>
+        </div>
+        <div class="map-frame reveal">
+          <!-- VERIFICAR coordenadas exactas antes de la versión definitiva; se usa búsqueda por dirección como query -->
+          <iframe
+            src="https://www.google.com/maps?q=Carretera+a+Jocotepec+1303%2C+San+Juan+Cosal%C3%A1%2C+45820+Jocotepec%2C+Jal.&output=embed"
+            title="Ubicación de Villa Armonía Hotel & Spa en el mapa"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       CTA FINAL
+       ================================================================ -->
+  <section class="section section--sage cta-banner" id="contacto" style="padding-block:var(--space-7);">
+    <div class="container reveal">
+      <h2>Ven a vivir tu Villa Armonía.</h2>
+      <div class="cta-group">
+        <a class="btn btn--primary" href="https://www.booking.com/Share-UYHjy5x" target="_blank" rel="noopener noreferrer">Reservar ahora</a>
+        <a class="btn btn--secondary" href="https://wa.me/523324948085" target="_blank" rel="noopener noreferrer">Consultar por WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ================================================================
+     FOOTER
+     ================================================================ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <!-- El logotipo vive exclusivamente en el header (una sola instancia en todo el DOM); aquí solo el nombre en tipografía de marca -->
+        <p style="font-family:var(--font-serif);font-style:italic;font-size:1.4rem;color:var(--color-cream);margin-bottom:0.75rem;">Villa Armonía</p>
+        <p>Hotel &amp; spa holístico para adultos, integrado con la naturaleza en San Juan Cosalá, Jalisco.</p>
+      </div>
+
+      <div class="footer-col">
+        <h3>Contacto</h3>
+        <ul>
+          <li><a href="https://wa.me/523324948085" target="_blank" rel="noopener noreferrer">WhatsApp +52 332 494 8085</a></li>
+          <li><a href="tel:+523766881522">Tel. +52 376 688 1522</a></li>
+          <li><a href="mailto:hotelgrupoarmonia@hotmail.com">hotelgrupoarmonia@hotmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Reservas</h3>
+        <ul>
+          <li><a href="https://www.booking.com/Share-UYHjy5x" target="_blank" rel="noopener noreferrer">Reservar en Booking.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Síguenos</h3>
+        <ul>
+          <li><a href="https://www.instagram.com/hotelvillaarmonia" target="_blank" rel="noopener noreferrer">Instagram @hotelvillaarmonia</a></li>
+          <li><a href="https://www.facebook.com/share/17amNqAKjT/" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Enlaces</h3>
+        <ul>
+          <li><a href="#habitaciones">Habitaciones</a></li>
+          <li><a href="#spa">Spa &amp; Bienestar</a></li>
+          <li><a href="#restaurante">Restaurante</a></li>
+          <li><a href="#jardines">Jardines</a></li>
+          <li><a href="#ubicacion">Ubicación</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-col" style="margin-top:2.5rem;">
+      <h3>Ubicación</h3>
+      <address>Carretera a Jocotepec 1303, San Juan Cosalá, 45820 Jocotepec, Jal.</address>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Villa Armonía Hotel &amp; Spa. Todos los derechos reservados.</span>
+      <span>Hotel exclusivo para adultos (18+).</span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/ScrollTrigger.min.js" defer></script>
+<script src="assets/js/main.js" defer></script>
 </body>
 </html>
